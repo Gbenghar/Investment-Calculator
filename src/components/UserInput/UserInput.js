@@ -18,14 +18,14 @@ const UserInput = (props) => {
     setUserInput(initialUserInput);
   };
 
-  const inputChangeHandler = (input, value) => {
-    setUserInput((prevInput) => {
-      return {
-        ...prevInput,
-        [input]: value
-      };
-    });
-  };
+ const inputChangeHandler = (input, value) => {
+  setUserInput((prevInput) => {
+    return {
+      ...prevInput,
+      [input]: +value,
+    };
+  });
+};
   return (
     <form onSubmit={submitHandler} className={classes.form}>
       <div className={classes["input-group"]}>
